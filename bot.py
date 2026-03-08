@@ -8,7 +8,7 @@ intents.message_content = True
 bot = commands.Bot(command_prefix=[".", "!"], intents=intents)
 
 # ROLE THAT CAN USE COMMANDS
-ALLOWED_ROLE_ID = 1479132124392063016
+ALLOWED_ROLE_ID = 1477803998345167031
 
 
 @bot.check
@@ -170,3 +170,4 @@ if not TOKEN:
     raise ValueError("TOKEN environment variable not found")
 
 bot.run(TOKEN)
+
