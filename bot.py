@@ -1,4 +1,5 @@
 import discord
+import os
 from discord.ext import commands
 
 intents = discord.Intents.default()
@@ -23,31 +24,21 @@ async def tos(ctx):
 
             "💲 **Payment Rules**\n"
             "• Full payment required before order processing.\n"
-
             "• No cancellations after payment is sent.\n"
-            
             "• No chargebacks, disputes, or payment reversals.\n"
-            
             "• Wrong address (e.g., LTC, PayPal) = ❌ No refund.\n\n"
 
             "📦 **Delivery & Proof**\n"
             "• Orders are delivered via DM or Ticket.\n"
-
             "• Orders are processed after payment confirmation.\n"
-
             "• Shipping times are estimates and may vary.\n"
-            
             "• Once shipped, responsibility transfers to buyer.\n\n"
-            
+
             "🔁 **Refunds & Replacements**\n"
             "• No refunds unless stock is unavailable and valid proof is provided.\n"
-            
             "• Replacements only for damaged or incorrect items.\n"
-            
             "• Refunds only considered if wrong item was sent.\n"
-            
             "• No replacements without proper evidence.\n"
-            
             "• Claims must be submitted within 48 hours of delivery.\n"
 
             "**buying = agreeing to the tos**"
@@ -63,10 +54,11 @@ async def tos(ctx):
 @bot.event
 async def on_ready():
     await bot.change_presence(
-      activity=discord.Activity(type=discord.ActivityType.watching, name="TXATC")
-             )
+        activity=discord.Activity(type=discord.ActivityType.watching, name="TXATC")
+    )
+    print(f"Logged in as {bot.user}")
 
- 
+
 @bot.command(name="legit")
 async def legit(ctx):
     embed = discord.Embed(
@@ -76,11 +68,9 @@ async def legit(ctx):
     )
 
     embed.set_footer(text="TXATC's manager")
-
     embed.set_thumbnail(url="https://media.discordapp.net/attachments/1464614742818689067/1479671675791605780/2290a773-e160-4fe9-896e-e03fdc72577a.png?ex=69aedd62&is=69ad8be2&hm=c288cea57e2981d0aaf8f14fb42a4678a6ec2f53cd5a050920e11dfaed9c5661&=&format=webp&quality=lossless&width=960&height=960")
 
     msg = await ctx.send(embed=embed)
-
     await msg.add_reaction("✅")
     await msg.add_reaction("❌")
 
@@ -98,12 +88,12 @@ async def payments(ctx):
         value="• **LTC**\n• **USDT**\n• **Paypal**\n• **Cashapp**",
         inline=False
     )
-    
-    embed.set_thumbnail(url="https://media.discordapp.net/attachments/1464614742818689067/1479671675791605780/2290a773-e160-4fe9-896e-e03fdc72577a.png?ex=69aedd62&is=69ad8be2&hm=c288cea57e2981d0aaf8f14fb42a4678a6ec2f53cd5a050920e11dfaed9c5661&=&format=webp&quality=lossless&width=960&height=960")
 
+    embed.set_thumbnail(url="https://media.discordapp.net/attachments/1464614742818689067/1479671675791605780/2290a773-e160-4fe9-896e-e03fdc72577a.png?ex=69aedd62&is=69ad8be2&hm=c288cea57e2981d0aaf8f14fb42a4678a6ec2f53cd5a050920e11dfaed9c5661&=&format=webp&quality=lossless&width=960&height=960")
     embed.set_footer(text="TXATC's manager")
 
     await ctx.send(embed=embed)
+
 
 TOS_CHANNEL_ID = 1477673751721021575
 PAYMENTS_CHANNEL_ID = 1479144203916415208
@@ -127,11 +117,11 @@ async def start(ctx):
     )
 
     embed.set_footer(text="TXATC's manager")
-
     embed.set_thumbnail(url="https://media.discordapp.net/attachments/1464614742818689067/1479671675791605780/2290a773-e160-4fe9-896e-e03fdc72577a.png?ex=69aedd62&is=69ad8be2&hm=c288cea57e2981d0aaf8f14fb42a4678a6ec2f53cd5a050920e11dfaed9c5661&=&format=webp&quality=lossless&width=960&height=960")
 
     await ctx.send(embed=embed)
-    
+
+
 user_ltc = {}
 
 @bot.command(name="setltc")
@@ -151,6 +141,7 @@ async def ltc(ctx, member: discord.Member = None):
         return
 
     await ctx.send(address)
+
 
 user_usdt = {}
 
@@ -173,4 +164,9 @@ async def usdt(ctx, member: discord.Member = None):
     await ctx.send(address)
 
 
-bot.run("MTQ2NDM1OTIwNzM2ODI2MTg2Ng.GwZmJq.hk8eBkqPoUCrqVG0_zMkOKsgAVp_48RksSjoWk")
+TOKEN = os.getenv("TOKEN")
+
+if not TOKEN:
+    raise ValueError("TOKEN environment variable not found")
+
+bot.run(TOKEN)
