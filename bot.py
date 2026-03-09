@@ -163,6 +163,14 @@ async def usdt(ctx, member: discord.Member = None):
 
     await ctx.send(address)
 
+@bot.command(name="ca")
+async def cashapp(ctx):
+    await ctx.send("$trap0utaspect")
+
+@bot.command(name="pp")
+async def paypal(ctx):
+    await ctx.send("https://www.paypal.com/paypalme/Abdo2403")
+
 
 TOKEN = os.getenv("TOKEN")
 
@@ -170,4 +178,5 @@ if not TOKEN:
     raise ValueError("TOKEN environment variable not found")
 
 bot.run(TOKEN)
+
 
