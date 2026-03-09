@@ -171,6 +171,42 @@ async def cashapp(ctx):
 async def paypal(ctx):
     await ctx.send("https://www.paypal.com/paypalme/Abdo2403")
 
+@bot.command(name="blox")
+async def bloxfruits(ctx):
+    embed = discord.Embed(
+        title="Blox Fruits",
+        description=(
+            "Galaxy kitsune $21/1\n"
+            "Ember dragon $18/1\n"
+            "Crimson kitsune $16/1\n"
+            "West dragon $14/1\n"
+            "East dragon $12/1\n"
+            "Kitsunes $2/1\n\n"
+            "**Anything else make a ticket to negotiate prices**"
+        ),
+        color=discord.Color.dark_purple()
+    )
+
+    embed.set_footer(text="TXATC's manager")
+    embed.set_thumbnail(url="https://media.discordapp.net/attachments/1464614742818689067/1479671675791605780/2290a773-e160-4fe9-896e-e03fdc72577a.png?ex=69aedd62&is=69ad8be2&hm=c288cea57e2981d0aaf8f14fb42a4678a6ec2f53cd5a050920e11dfaed9c5661&=&format=webp&quality=lossless&width=960&height=960")
+    
+    await ctx.send(embed=embed)
+
+@bot.command(name="robux")
+async def robux(ctx):
+    embed = discord.Embed(
+        title="Robux",
+        description=(
+            "<a:Fluxkigmaiarrow:1462418714790985821> 4.5$/1k —> **In-game gifting** or tax **not** covered <:robux:1464918905159024826>\n\n"
+            "<a:Fluxkigmaiarrow:1462418714790985821> 5.5$/1k —> **Tax covered** <:robux:1464918905159024826>"
+        ),
+        color=discord.Color.dark_purple()
+    )
+
+    embed.set_footer(text="TXATC's manager")
+    embed.set_thumbnail(url="https://media.discordapp.net/attachments/1464614742818689067/1479671675791605780/2290a773-e160-4fe9-896e-e03fdc72577a.png?ex=69aedd62&is=69ad8be2&hm=c288cea57e2981d0aaf8f14fb42a4678a6ec2f53cd5a050920e11dfaed9c5661&=&format=webp&quality=lossless&width=960&height=960")
+    await ctx.send(embed=embed)
+
 
 TOKEN = os.getenv("TOKEN")
 
@@ -178,5 +214,6 @@ if not TOKEN:
     raise ValueError("TOKEN environment variable not found")
 
 bot.run(TOKEN)
+
 
 
