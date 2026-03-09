@@ -177,8 +177,8 @@ async def bloxfruits(ctx):
         title="Blox Fruits",
         description=(
             "Galaxy kitsune $21/1\n"
-            "Ember dragon $18/1\n"
-            "Crimson kitsune $16/1\n"
+            "Ember dragon $17/1\n"
+            "Crimson kitsune $15/1\n"
             "West dragon $14/1\n"
             "East dragon $12/1\n"
             "Kitsunes $2/1\n\n"
@@ -214,6 +214,7 @@ if not TOKEN:
     raise ValueError("TOKEN environment variable not found")
 
 bot.run(TOKEN)
+
 
 
 
