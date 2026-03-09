@@ -46,15 +46,15 @@ async def tos(ctx):
         color=discord.Color.dark_purple()
     )
     embed.set_footer(text="TXATC's manager")
-    embed.set_thumbnail(url="https://media.discordapp.net/attachments/1464614742818689067/1479671675791605780/2290a773-e160-4fe9-896e-e03fdc72577a.png?ex=69aedd62&is=69ad8be2&hm=c288cea57e2981d0aaf8f14fb42a4678a6ec2f53cd5a050920e11dfaed9c5661&=&format=webp&quality=lossless&width=960&height=960")
-    embed.set_image(url="https://cdn.discordapp.com/attachments/1464614742818689067/1480222220587499612/2EF2A6FA-3D9C-441E-ADDA-7F10A315C866.png?ex=69aee3de&is=69ad925e&hm=5e0ec759b13a84ffdfa5e5dfa675a5510a0c7f104b279c4a14f3f8a25149e9f6&")
+    embed.set_thumbnail(url="https://images-ext-1.discordapp.net/external/uivLzTs7ep6MdoHExeUGlX4lVxS89HpzpuM8T3sxBHA/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/1464359207368261866/1d4713cb32f5f57c0e611fcdee70be8f.png?format=webp&quality=lossless")
+    embed.set_image(url="https://media.discordapp.net/attachments/1480478586036162632/1480610047267700871/banner.png?ex=69b04d0f&is=69aefb8f&hm=f2b32b4d63e8fe730be214442b6c490cb3ff93ddebfda34791dbcff67a7e435e&=&format=webp&quality=lossless&width=1376&height=917")
     await ctx.send(embed=embed)
 
 
 @bot.event
 async def on_ready():
     await bot.change_presence(
-        activity=discord.Activity(type=discord.ActivityType.watching, name="TXATC")
+        activity=discord.Activity(type=discord.ActivityType.watching, name="TXATC discord.gg/txatc")
     )
     print(f"Logged in as {bot.user}")
 
@@ -68,7 +68,7 @@ async def legit(ctx):
     )
 
     embed.set_footer(text="TXATC's manager")
-    embed.set_thumbnail(url="https://media.discordapp.net/attachments/1464614742818689067/1479671675791605780/2290a773-e160-4fe9-896e-e03fdc72577a.png?ex=69aedd62&is=69ad8be2&hm=c288cea57e2981d0aaf8f14fb42a4678a6ec2f53cd5a050920e11dfaed9c5661&=&format=webp&quality=lossless&width=960&height=960")
+    embed.set_thumbnail(url="https://images-ext-1.discordapp.net/external/uivLzTs7ep6MdoHExeUGlX4lVxS89HpzpuM8T3sxBHA/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/1464359207368261866/1d4713cb32f5f57c0e611fcdee70be8f.png?format=webp&quality=lossless")
 
     msg = await ctx.send(embed=embed)
     await msg.add_reaction("✅")
@@ -89,7 +89,7 @@ async def payments(ctx):
         inline=False
     )
 
-    embed.set_thumbnail(url="https://media.discordapp.net/attachments/1464614742818689067/1479671675791605780/2290a773-e160-4fe9-896e-e03fdc72577a.png?ex=69aedd62&is=69ad8be2&hm=c288cea57e2981d0aaf8f14fb42a4678a6ec2f53cd5a050920e11dfaed9c5661&=&format=webp&quality=lossless&width=960&height=960")
+    embed.set_thumbnail(url="https://images-ext-1.discordapp.net/external/uivLzTs7ep6MdoHExeUGlX4lVxS89HpzpuM8T3sxBHA/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/1464359207368261866/1d4713cb32f5f57c0e611fcdee70be8f.png?format=webp&quality=lossless")
     embed.set_footer(text="TXATC's manager")
 
     await ctx.send(embed=embed)
@@ -117,7 +117,7 @@ async def start(ctx):
     )
 
     embed.set_footer(text="TXATC's manager")
-    embed.set_thumbnail(url="https://media.discordapp.net/attachments/1464614742818689067/1479671675791605780/2290a773-e160-4fe9-896e-e03fdc72577a.png?ex=69aedd62&is=69ad8be2&hm=c288cea57e2981d0aaf8f14fb42a4678a6ec2f53cd5a050920e11dfaed9c5661&=&format=webp&quality=lossless&width=960&height=960")
+    embed.set_thumbnail(url="https://images-ext-1.discordapp.net/external/uivLzTs7ep6MdoHExeUGlX4lVxS89HpzpuM8T3sxBHA/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/1464359207368261866/1d4713cb32f5f57c0e611fcdee70be8f.png?format=webp&quality=lossless")
 
     await ctx.send(embed=embed)
 
@@ -188,7 +188,7 @@ async def bloxfruits(ctx):
     )
 
     embed.set_footer(text="TXATC's manager")
-    embed.set_thumbnail(url="https://media.discordapp.net/attachments/1464614742818689067/1479671675791605780/2290a773-e160-4fe9-896e-e03fdc72577a.png?ex=69aedd62&is=69ad8be2&hm=c288cea57e2981d0aaf8f14fb42a4678a6ec2f53cd5a050920e11dfaed9c5661&=&format=webp&quality=lossless&width=960&height=960")
+    embed.set_thumbnail(url="https://images-ext-1.discordapp.net/external/uivLzTs7ep6MdoHExeUGlX4lVxS89HpzpuM8T3sxBHA/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/1464359207368261866/1d4713cb32f5f57c0e611fcdee70be8f.png?format=webp&quality=lossless")
     
     await ctx.send(embed=embed)
 
@@ -205,7 +205,7 @@ async def robux(ctx):
     )
 
     embed.set_footer(text="TXATC's manager")
-    embed.set_thumbnail(url="https://media.discordapp.net/attachments/1464614742818689067/1479671675791605780/2290a773-e160-4fe9-896e-e03fdc72577a.png?ex=69aedd62&is=69ad8be2&hm=c288cea57e2981d0aaf8f14fb42a4678a6ec2f53cd5a050920e11dfaed9c5661&=&format=webp&quality=lossless&width=960&height=960")
+    embed.set_thumbnail(url="https://images-ext-1.discordapp.net/external/uivLzTs7ep6MdoHExeUGlX4lVxS89HpzpuM8T3sxBHA/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/1464359207368261866/1d4713cb32f5f57c0e611fcdee70be8f.png?format=webp&quality=lossless")
     await ctx.send(embed=embed)
 
 
@@ -215,6 +215,7 @@ if not TOKEN:
     raise ValueError("TOKEN environment variable not found")
 
 bot.run(TOKEN)
+
 
 
 
