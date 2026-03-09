@@ -174,14 +174,14 @@ async def paypal(ctx):
 @bot.command(name="blox")
 async def bloxfruits(ctx):
     embed = discord.Embed(
-        title="Blox Fruits",
+        title="# Blox Fruits",
         description=(
-            "Galaxy kitsune $21/1\n"
-            "Ember dragon $17/1\n"
-            "Crimson kitsune $15/1\n"
-            "West dragon $14/1\n"
-            "East dragon $12/1\n"
-            "Kitsunes $2/1\n\n"
+            "**Galaxy kitsune $21/1**\n"
+            "**Ember dragon $17/1**\n"
+            "**Crimson kitsune $15/1**\n"
+            "**West dragon $14/1**\n"
+            "**East dragon $12/1**\n"
+            "**Kitsunes $2/1\n**\n"
             "**Anything else make a ticket to negotiate prices**"
         ),
         color=discord.Color.dark_purple()
@@ -197,8 +197,9 @@ async def robux(ctx):
     embed = discord.Embed(
         title="Robux",
         description=(
-            "<a:Fluxkigmaiarrow:1462418714790985821> 4.5$/1k —> **In-game gifting** or tax **not** covered <:robux:1464918905159024826>\n\n"
-            "<a:Fluxkigmaiarrow:1462418714790985821> 5.5$/1k —> **Tax covered** <:robux:1464918905159024826>"
+            "4.5$/1k —> **In-game gifting** or tax **not** covered\n\n"
+            "5.5$/1k —> **Tax covered**"
+            "6k in stock right now"
         ),
         color=discord.Color.dark_purple()
     )
@@ -214,6 +215,7 @@ if not TOKEN:
     raise ValueError("TOKEN environment variable not found")
 
 bot.run(TOKEN)
+
 
 
 
