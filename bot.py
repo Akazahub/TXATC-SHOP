@@ -174,7 +174,7 @@ async def paypal(ctx):
 @bot.command(name="blox")
 async def bloxfruits(ctx):
     embed = discord.Embed(
-        title="# Blox Fruits",
+        title="Blox Fruits",
         description=(
             "**Galaxy kitsune $21/1**\n"
             "**Ember dragon $17/1**\n"
@@ -182,12 +182,11 @@ async def bloxfruits(ctx):
             "**West dragon $14/1**\n"
             "**East dragon $12/1**\n"
             "**Kitsunes $2/1\n**\n"
-            "**Anything else make a ticket to negotiate prices**"
+            "**Anything else make a ticket in <#1477674326806368538> to negotiate prices**"
         ),
         color=discord.Color.dark_purple()
     )
 
-    embed.set_footer(text="TXATC's manager")
     embed.set_thumbnail(url="https://images-ext-1.discordapp.net/external/uivLzTs7ep6MdoHExeUGlX4lVxS89HpzpuM8T3sxBHA/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/1464359207368261866/1d4713cb32f5f57c0e611fcdee70be8f.png?format=webp&quality=lossless")
     
     await ctx.send(embed=embed)
@@ -204,7 +203,6 @@ async def robux(ctx):
         color=discord.Color.dark_purple()
     )
 
-    embed.set_footer(text="TXATC's manager")
     embed.set_thumbnail(url="https://images-ext-1.discordapp.net/external/uivLzTs7ep6MdoHExeUGlX4lVxS89HpzpuM8T3sxBHA/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/1464359207368261866/1d4713cb32f5f57c0e611fcdee70be8f.png?format=webp&quality=lossless")
     await ctx.send(embed=embed)
 
@@ -215,6 +213,7 @@ if not TOKEN:
     raise ValueError("TOKEN environment variable not found")
 
 bot.run(TOKEN)
+
 
 
 
