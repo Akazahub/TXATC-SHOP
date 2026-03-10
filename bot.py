@@ -191,21 +191,26 @@ async def bloxfruits(ctx):
     
     await ctx.send(embed=embed)
 
-@bot.command(name="robux")
-async def robux(ctx):
+@bot.command(name="accs")
+async def accs(ctx):
     embed = discord.Embed(
-        title="Robux",
+        title="AGED ACCS",
         description=(
-            "4.5$/1k —> **In-game gifting** or tax **not** covered\n\n"
-            "5.5$/1k —> **Tax covered**"
-            "6k in stock right now"
+            "**2026-2024 - 1$/0.86€**\n"
+            "**2023-2022 - 1.5$/1.3€**\n"
+            "**2021-2020 - 2$/1.73€**\n"
+            "**2019 - 3$/2.6€**\n"
+            "**2018 - 4$/3.43€**\n"
+            "**2017 - 6$/5.15€**\n"
+            "**2016 - 12$/10.3€**\n\n"
+            "Make a ticket in <#1477674326806368538> if interested"
         ),
         color=discord.Color.dark_purple()
     )
-
+    
     embed.set_thumbnail(url="https://images-ext-1.discordapp.net/external/uivLzTs7ep6MdoHExeUGlX4lVxS89HpzpuM8T3sxBHA/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/1464359207368261866/1d4713cb32f5f57c0e611fcdee70be8f.png?format=webp&quality=lossless")
+    embed.set_footer(text="TXATC Shop")
     await ctx.send(embed=embed)
-
 
 TOKEN = os.getenv("TOKEN")
 
@@ -213,6 +218,7 @@ if not TOKEN:
     raise ValueError("TOKEN environment variable not found")
 
 bot.run(TOKEN)
+
 
 
 
