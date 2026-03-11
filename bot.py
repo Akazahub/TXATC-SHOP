@@ -194,7 +194,7 @@ async def bloxfruits(ctx):
 @bot.command(name="accs")
 async def accs(ctx):
     embed = discord.Embed(
-        title="AGED ACCS",
+        title="Aged Accounts:",
         description=(
             "**2026-2024 - 1$/0.86€**\n"
             "**2023-2022 - 1.5$/1.3€**\n"
@@ -218,6 +218,7 @@ if not TOKEN:
     raise ValueError("TOKEN environment variable not found")
 
 bot.run(TOKEN)
+
 
 
 
